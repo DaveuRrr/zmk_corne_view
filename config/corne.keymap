@@ -46,10 +46,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F1          &kp F2      &kp F3    &kp F4        &kp F5       &kp F6           &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
-&kp F7          &kp F8      &kp F9    &kp F10       &kp F11      &kp F12          &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
-&kp LEFT_SHIFT  &kp INSERT  &kp HOME  &kp END       &kp PAGE_UP  &kp PAGE_DOWN    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-                                      &kp LEFT_ALT  &trans       &trans           &trans           &trans           &trans
+&kp F1          &kp F2      &kp F3    &kp F4        &kp F5       &kp F6           &kp SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &trans
+&kp F7          &kp F8      &kp F9    &kp F10       &kp F11      &kp F12          &kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &trans
+&kp LEFT_SHIFT  &kp INSERT  &kp HOME  &kp END       &kp PAGE_UP  &kp PAGE_DOWN    &kp EQUAL     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans     &trans
+                                      &kp LEFT_ALT  &trans       &trans           &trans        &trans           &kp KP_NUMBER_0
             >;
 
             label = "FunNum";
@@ -65,8 +65,8 @@
             bindings = <
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0   &kp DELETE
 &trans     &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &trans          &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE       &trans
-&trans     &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans          &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp ENTER
-                                       &trans        &trans        &trans          &trans          &trans        &trans
+&trans     &trans        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans          &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp ENTER
+                                       &trans        &trans        &bt BT_CLR      &trans          &trans        &trans
             >;
 
             label = "RowCol";
