@@ -18,6 +18,24 @@
         };
     };
 
+    macros {
+        EWGFR: EWGFR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp F &kp D &kp I>, <&macro_release>;
+
+            label = "EWGFR";
+        };
+
+        EWGFL: EWGFL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp S &kp D &kp I>, <&macro_release>;
+
+            label = "EWGFL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -74,8 +92,8 @@
 
         gaming_layer {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E      &kp R     &kp T        &kp Y      &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D      &kp F     &kp G        &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp ESC    &kp Q  &kp W  &kp E      &kp R     &kp T        &EWGFR     &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D      &kp F     &kp G        &EWGFL     &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
 &kp LSHFT  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
                          &kp LCTRL  &kp LALT  &kp SPACE    &kp SPACE  &trans  &kp LGUI
             >;
