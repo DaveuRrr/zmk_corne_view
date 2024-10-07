@@ -14,13 +14,43 @@
         compatible = "zmk,combos";
 
         gaming {
-            bindings = <&tog 5>;
+            bindings = <&tog 4>;
             key-positions = <37 40>;
         };
 
         blutooth {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <38 39>;
+        };
+
+        left_click {
+            bindings = <&mkp LCLK>;
+            key-positions = <19 20>;
+        };
+
+        right_click {
+            bindings = <&mkp RCLK>;
+            key-positions = <20 21>;
+        };
+
+        scroll_up {
+            bindings = <&msc MOVE_UP>;
+            key-positions = <7 8>;
+        };
+
+        scroll_down {
+            bindings = <&msc MOVE_DOWN>;
+            key-positions = <8 9>;
+        };
+
+        scroll_left {
+            bindings = <&msc MOVE_LEFT>;
+            key-positions = <31 32>;
+        };
+
+        scroll_right {
+            bindings = <&msc MOVE_RIGHT>;
+            key-positions = <32 33>;
         };
     };
 
@@ -35,10 +65,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E             &kp R  &kp T    &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
-&kp LEFT_ALT  &kp A  &kp S  &kp D             &kp F  &kp G    &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z  &kp X  &kp C             &kp V  &kp B    &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ENTER
-                            &kp LEFT_CONTROL  &mo 1  &mo 3    &kp SPACE  &mo 2  &kp LEFT_GUI
+&kp TAB       &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&kp LEFT_ALT  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LSHFT     &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ENTER
+                            &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp LEFT_GUI
             >;
 
             label = "Default";
@@ -76,17 +106,6 @@
             >;
 
             label = "RowCol";
-        };
-
-        mouse_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc MOVE_UP &msc MOVE_DOWN &msc MOVE_LEFT &msc MOVE_RIGHT   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1     &mkp MB2       &mkp MB3       &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans       &trans         &trans         &trans            &trans
-                        &trans  &trans  &trans    &trans  &trans       &trans
-            >;
-
-            label = "Mouse";
         };
 
         bluetooth_layer {
