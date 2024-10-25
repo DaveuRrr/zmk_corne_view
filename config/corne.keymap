@@ -5,15 +5,13 @@
  */
 
 #include <behaviors.dtsi>
-#include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors/mouse_keys.dtsi>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 10 // 10
-
-#include <dt-bindings/zmk/mouse.h>
 
 &mmv {
     acceleration-exponent = <1>;      // 1
@@ -26,6 +24,7 @@
     time-to-max-speed-ms = <300>;     // 300
     delay-ms = <0>;                   // 0
 };
+
 
 / {
     combos {
@@ -55,7 +54,7 @@
             bindings = <&mkp MCLK>;
             key-positions = <19 20 21>;
         };
-        
+
         scroll_up {
             bindings = <&msc MOVE_UP>;
             key-positions = <7 8>;
@@ -88,7 +87,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&lt 4 TAB     &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
 &kp LEFT_ALT  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
 &kp LSHFT     &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ENTER
                             &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp LEFT_GUI
@@ -140,6 +139,17 @@
             >;
 
             label = "BLE";
+        };
+
+        mouse_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc MOVE_UP  &msc MOVE_DOWN  &msc MOVE_LEFT  &msc MOVE_RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK     &mkp RCLK       &mkp MCLK       &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans          &trans          &trans           &trans
+                        &trans  &trans  &trans    &trans  &trans        &trans
+            >;
+
+            label = "Mouse";
         };
 
         gaming_layer {
