@@ -1,7 +1,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 600   // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 2    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 1    // 10
 
 &mmv {
     acceleration-exponent = <1>;         // 1
