@@ -23,40 +23,40 @@
             key-positions = <38 39>;
         };
 
-        left_click {
-            bindings = <&mkp LCLK>;
-            key-positions = <19 20>;
-        };
+        //left_click {
+        //    bindings = <&mkp LCLK>;
+        //    key-positions = <19 20>;
+        //};
 
-        right_click {
-            bindings = <&mkp RCLK>;
-            key-positions = <20 21>;
-        };
+        //right_click {
+        //    bindings = <&mkp RCLK>;
+        //    key-positions = <20 21>;
+        //};
 
-        middle_click {
-            bindings = <&mkp MCLK>;
-            key-positions = <19 20 21>;
-        };
+        //middle_click {
+        //    bindings = <&mkp MCLK>;
+        //    key-positions = <19 20 21>;
+        //};
 
-        scroll_up {
-            bindings = <&msc MOVE_UP>;
-            key-positions = <7 8>;
-        };
+        //scroll_up {
+        //    bindings = <&msc MOVE_UP>;
+        //    key-positions = <7 8>;
+        //};
 
-        scroll_down {
-            bindings = <&msc MOVE_DOWN>;
-            key-positions = <8 9>;
-        };
+        //scroll_down {
+        //    bindings = <&msc MOVE_DOWN>;
+        //    key-positions = <8 9>;
+        //};
 
-        scroll_left {
-            bindings = <&msc MOVE_LEFT>;
-            key-positions = <31 32>;
-        };
+        //scroll_left {
+        //    bindings = <&msc MOVE_LEFT>;
+        //    key-positions = <31 32>;
+        //};
 
-        scroll_right {
-            bindings = <&msc MOVE_RIGHT>;
-            key-positions = <32 33>;
-        };
+        //scroll_right {
+        //    bindings = <&msc MOVE_RIGHT>;
+        //    key-positions = <32 33>;
+        //};
     };
 
     keymap {
