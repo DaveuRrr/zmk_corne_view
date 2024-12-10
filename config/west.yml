@@ -2,14 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
+    #- name: petejohanson
+    #  url-base: https://github.com/petejohanson
     - name: m165437
       url-base: https://github.com/M165437
   projects:
     - name: zmk
-      remote: petejohanson
-      revision: feat/pointers-with-input-processors # feat/pointers-move-scroll
+    #  remote: petejohanson
+    #  revision: feat/pointers-with-input-processors # feat/pointers-move-scroll
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
     - name: nice-view-gem
       remote: m165437
