@@ -37,16 +37,16 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC  |
+            // | LALT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '    |
+            // | LSFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | ENTER |
+            //                    | LCTRL | LWR | TAB   | SPACE | RSE | LGUI |
 
             bindings = <
-&lt 4 TAB       &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&lt 4 ESC     &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
 &kp LEFT_ALT  &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
 &kp LSHFT     &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ENTER
-                            &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp LEFT_GUI
+                            &kp LEFT_CONTROL  &mo 1  &kp TAB      &kp SPACE  &mo 2  &kp LEFT_GUI
             >;
 
             label = "Default";
@@ -54,10 +54,10 @@
 
         fun_num_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |   |  /   |  7  |  8  |  9  |  -   |       |
+            // |  F7  |  F8  |  F9  | F10  | F11  | F12  |   |  *   |  4  |  5  |  6  |  +   |       |
+            // | LSFT | INS  | HOME | END  | PGUP | PGDN |   |  =   |  1  |  2  |  3  |      |       |
+            //                      | LALT  |      |         |        |     |  0  |
 
             bindings = <
 &kp F1          &kp F2      &kp F3    &kp F4        &kp F5       &kp F6           &kp SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &trans
@@ -71,10 +71,10 @@
 
         row_col_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL   |
+            // |      | ←   | ↓   | ↑   | →   |     |   |  _  |  +  |  {  |  }  |  |  |       |
+            // |      |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  | ENTER |
+            //                    |      |     |       |       |     |      |
 
             bindings = <
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0   &kp DELETE
@@ -87,6 +87,11 @@
         };
 
         bluetooth_layer {
+            // -----------------------------------------------------------------------------------------
+            // |     |     |     |     |     |     |   |     |     |     |     |     |
+            // |     |     |     |     |     |     |   |     |     |     |     |     |
+            // | BT0 | BT1 | BT2 | BT3 | BT4 | BTC |   |     |     |     |     |     |
+            //                    |       |    |       |       |      |       |
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
@@ -98,6 +103,12 @@
         };
 
         mouse_layer {
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   | SCR↑ | SCR↓ | SCR← | SCR→ |       |
+            // |      | ←   | ↓   | ↑   | →   |     |   | LCLK | RCLK | MCLK |      |       |
+            // |      |     |     |     |     |     |   |      |      |      |      |       |
+            //                    |       |    |       |        |      |       |
+
             bindings = <
 &trans  &trans          &trans          &trans        &trans           &trans    &trans  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans
 &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans    &trans  &mkp LCLK     &mkp RCLK       &mkp MCLK       &trans          &trans
@@ -109,10 +120,16 @@
         };
 
         gaming_layer {
+            // -----------------------------------------------------------------------------------------
+            // | ESC  |  T  |  Q  |  W  |  E  |  R  |   |  Y  |  U  |  I  |  O  |  P  | BSPC  |
+            // | TAB  |  G  |  A  |  S  |  D  |  F  |   |  H  |  J  |  K  |  L  |  ;  |  '    |
+            // | LSFT |  B  |  Z  |  X  |  C  |  V  |   |  N  |  M  |  ,  |  .  |  /  | ENTER |
+            //                 | LCTRL | LALT | SPACE | SPACE |      | LGUI |
+
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E      &kp R     &kp T        &kp Y      &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D      &kp F     &kp G        &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+&kp ESC     &kp T   &kp Q   &kp W   &kp E   &kp R                  &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &kp G   &kp A   &kp S   &kp D   &kp F                  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT   &kp B   &kp Z   &kp X   &kp C   &kp V                  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
                          &kp LCTRL  &kp LALT  &kp SPACE    &kp SPACE  &trans  &kp LGUI
             >;
 
