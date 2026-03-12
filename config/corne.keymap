@@ -72,15 +72,15 @@
         row_col_layer {
             // -----------------------------------------------------------------------------------------
             // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL   |
-            // |      | ←   | ↓   | ↑   | →   |     |   |  _  |  +  |  {  |  }  |  |  |       |
+            // |      |     |  ←  |  ↓  |  →  |     |   |  _  |  +  |  {  |  }  |  |  |       |
             // |      |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  | ENTER |
-            //                    |      |     |       |       |     |      |
+            //                    |      |     | ↑     |       |     |      |
 
             bindings = <
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9       &kp NUMBER_0   &kp DELETE
-&trans     &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &trans          &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE       &trans
+&trans     &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans          &kp UNDERSCORE  &kp PLUS      &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PIPE       &trans
 &trans     &trans        &trans        &trans        &trans        &trans          &kp MINUS       &kp EQUAL     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp ENTER
-                                       &trans        &trans        &trans          &trans          &trans        &trans
+                                       &trans        &trans        &kp UP          &trans          &trans        &trans
             >;
 
             label = "RowCol";
@@ -104,16 +104,16 @@
 
         mouse_layer {
             // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |   | SCR↑ | SCR↓ | SCR← | SCR→ |       |
-            // |      | ←   | ↓   | ↑   | →   |     |   | LCLK | RCLK | MCLK |      |       |
+            // |      |     |     |  ↑  |     |     |   | SCR↑ | SCR↓ | SCR← | SCR→ |       |
+            // |      |     |  ←  |  ↓  |  →  |     |   | LCLK | RCLK | MCLK |      |       |
             // |      |     |     |     |     |     |   |      |      |      |      |       |
-            //                    |       |    |       |        |      |       |
+            //                      |      |    |  ↑    |        |      |       |
 
             bindings = <
-&trans  &trans          &trans          &trans        &trans           &trans    &trans  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans
-&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans    &trans  &mkp LCLK     &mkp RCLK       &mkp MCLK       &trans          &trans
-&trans  &trans          &trans          &trans        &trans           &trans    &trans  &trans        &trans          &trans          &trans          &trans
-                                        &trans        &trans           &trans    &trans  &trans        &trans
+&trans  &trans  &trans          &mmv MOVE_UP    &trans           &trans        &trans  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_LEFT  &msc SCRL_RIGHT &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans        &trans  &mkp LCLK     &mkp RCLK       &mkp MCLK       &trans          &trans
+&trans  &trans  &trans          &trans          &trans           &trans        &trans  &trans        &trans          &trans          &trans          &trans
+                                        &trans        &trans     &mmv MOVE_UP  &trans  &trans        &trans
             >;
 
             label = "Mouse";
