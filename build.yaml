@@ -17,7 +17,7 @@ include:
     shield: corne_left nice_view_adapter #nice_view_gem
   - board: nice_nano_v2//zmk
     shield: corne_right nice_view_adapter #nice_view_gem
-  - board: nice_nano_v2/zmk
+  - board: nice_nano_v2//zmk
     shield: corne_left
   - board: nice_nano_v2//zmk
     shield: corne_right
