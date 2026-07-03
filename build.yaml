@@ -13,6 +13,15 @@
 #
 ---
 include:
+  # === DONGLE MODE ===
+  - board: nice_nano//zmk
+    shield: corne_dongle nice_view_adapter nice_view
+  - board: nice_nano//zmk
+    shield: corne_left corne_left_peripheral nice_view_adapter nice_view
+  - board: nice_nano//zmk
+    shield: corne_left corne_left_peripheral
+
+  # === TRADITIONAL MODE (left half as central) ===
   - board: nice_nano//zmk
     shield: corne_left nice_view_adapter nice_view
   - board: nice_nano//zmk
