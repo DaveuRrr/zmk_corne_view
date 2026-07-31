@@ -13,6 +13,10 @@
 #
 ---
 include:
+  # === SETTINGS RESET (flash, re-pair, then reflash normal firmware) ===
+  - board: nice_nano//zmk
+    shield: settings_reset
+
   # === DONGLE MODE ===
   - board: nice_nano//zmk
     shield: corne_dongle nice_view_adapter nice_view
