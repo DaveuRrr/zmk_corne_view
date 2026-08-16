@@ -44,7 +44,7 @@
                             &kp LEFT_CONTROL  &mo 1  &kp TAB      &kp SPACE  &mo 2  &kp LEFT_GUI
             >;
 
-            label = "Default";
+            display-name = "Default";
         };
 
         fun_num_layer {
@@ -61,7 +61,7 @@
                                       &kp LEFT_ALT  &trans       &trans           &trans        &trans           &kp KP_NUMBER_0
             >;
 
-            label = "FunNum";
+            display-name = "FunNum";
         };
 
         row_col_layer {
@@ -78,7 +78,7 @@
                                        &trans        &trans        &kp UP          &trans          &trans        &trans
             >;
 
-            label = "RowCol";
+            display-name = "RowCol";
         };
 
         bluetooth_layer {
@@ -94,7 +94,7 @@
                                           &trans        &trans        &trans        &trans  &trans  &trans
             >;
 
-            label = "BLE";
+            display-name = "BLE";
         };
 
         mouse_layer {
@@ -111,7 +111,7 @@
                         &trans  &trans &trans     &mmv MOVE_UP    &trans  &trans
             >;
 
-            label = "Mouse";
+            display-name = "Mouse";
         };
 
         gaming_layer {
@@ -128,7 +128,7 @@
                          &kp LCTRL  &kp LALT  &kp SPACE    &kp SPACE  &trans  &kp LGUI
             >;
 
-            label = "Gaming";
+            display-name = "Gaming";
         };
     };
 };
