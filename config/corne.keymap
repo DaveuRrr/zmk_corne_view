@@ -25,11 +25,6 @@
             bindings = <&tog 3>;
             key-positions = <38 39>;
         };
-
-        mouse {
-            bindings = <&tog 4>;
-            key-positions = <36 41>;
-        };
     };
 
     keymap {
